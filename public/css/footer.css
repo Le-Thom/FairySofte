@@ -1,0 +1,98 @@
+footer {
+    min-height: 10rem;
+    background: #303030;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 5rem;
+    color: whitesmoke;
+    justify-content: center;
+    gap: 8rem;
+    section#description {
+        display: flex;
+        flex-direction: row;
+        width: 15%;
+        div {
+            div.head {
+                display: flex;
+                flex-direction: row;
+                gap: .5rem;
+
+                h1 {
+                    font-size: 1.8rem;
+                    margin: 0;
+                    align-content: center;
+                }
+            }
+
+        }
+        ul {
+            list-style: none;
+            align-content: center;
+            li {
+                display: flex;
+                height: 50%;
+                align-content: center;
+                justify-content: center;
+                flex-direction: row;
+                gap: .7rem;
+                a {
+                    position: relative;
+                    text-decoration: none;
+                    color: inherit;
+                    font-size: 1.5rem;
+                    p {
+                        position: absolute;
+                        background: whitesmoke;
+                        color: black;
+                        font-size: 1rem;
+                        width: max-content;
+                        left: 120%;
+                        z-index: 10;
+                        top: -60%;
+                        padding: .1rem .3rem;
+                        padding-left: .5rem;
+                        clip-path: polygon(
+                            5% 0%,
+                            100% 0%,
+                            100% 100%,
+                            5% 100%,
+                            5% 85%,
+                            0% 50%,
+                            5% 15%
+                        );
+                        visibility: collapse;
+                    }
+                    p.shown {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    section#socials {
+        width: max-content;
+    }
+    section#links {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        div#link-list {
+            display: flex;
+            flex-direction: column;
+            gap: .3rem;
+            text-align: center;
+            p.link-head {
+                color: #c0c0c0;
+                font-weight: bold;
+                margin: 0.5rem 0;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

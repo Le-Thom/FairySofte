@@ -1,0 +1,1 @@
+<script src="/public/animejs/js/anime.iife.min.js"></script>
