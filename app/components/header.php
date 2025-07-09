@@ -33,6 +33,7 @@ include_once __DIR__ . "/../imports/animations.php";
                     <a href="/asso/documents"><i class="fa-duotone fa-solid fa-folder-open"></i>&nbsp;Documents et formulaires</a>
                 </div>
             </div>
+            <a href="/news"><i class="fa-duotone fa-solid fa-newspaper"></i>&nbsp;Nouveautés</a>
         </nav>
     </section>
     <section id="account">

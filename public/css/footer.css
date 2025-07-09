@@ -1,4 +1,4 @@
-footer {
+    footer {
     min-height: 10rem;
     background: #303030;
     display: flex;
@@ -33,7 +33,7 @@ footer {
                 height: 50%;
                 align-content: center;
                 justify-content: center;
-                flex-direction: row;
+                flex-direction: column;
                 gap: .7rem;
                 a {
                     position: relative;
@@ -80,7 +80,7 @@ footer {
             display: flex;
             flex-direction: column;
             gap: .3rem;
-            text-align: center;
+            text-align: left;
             p.link-head {
                 color: #c0c0c0;
                 font-weight: bold;
