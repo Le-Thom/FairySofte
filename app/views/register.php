@@ -23,7 +23,7 @@ if(isset($_SESSION["auth_token"])) {
 <body>
 <main>
     <div id="register">
-        <h1>Créer un compte<a></a></h1>
+        <h1>Créer un compte<a>&nbsp;</a></h1>
         <form>
             <div class="input-group">
                 <label for="first-name">Prénom<a>&nbsp;*</a></label>
@@ -34,8 +34,13 @@ if(isset($_SESSION["auth_token"])) {
                 <input type="text" id="last-name" name="last-name" required>
             </div>
             <div class="input-group">
-                <label for="in-game-name">Pseudonyme <i class="fa-solid fa-circle-question"></i></label>
+                <label for="in-game-name">Pseudonyme</label>
+                <p>Ce pseudonyme sera utilisé sur le blog, le forum et sera transmis aux organisateur de sessions d'airsoft de l'association afin de pouvoir vous identifier plus facilement.</p>
                 <input type="text" id="in-game-name" name="in-game-name">
+            </div>
+            <div class="input-group">
+                <label for="birthdate">Date de naissance<a>&nbsp;*</a></label>
+                <input type="date" id="birthdate" name="birthdate" required>
             </div>
             <div class="input-group">
                 <label for="mail">Adresse e-mail<a>&nbsp;*</a></label>
@@ -48,10 +53,6 @@ if(isset($_SESSION["auth_token"])) {
             <div class="input-group">
                 <label for="password-confirm">Confirmer le mot de passe<a>&nbsp;*</a></label>
                 <input type="password" id="password-confirm" name="password-confirm" required>
-            </div>
-            <div class="input-group">
-                <label for="birthdate">Date de naissance<a>&nbsp;*</a></label>
-                <input type="date" id="birthdate" name="birthdate" required>
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
