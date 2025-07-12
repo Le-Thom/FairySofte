@@ -1,8 +1,11 @@
 header {
+    position: sticky;
+    top: 0;
     display: flex;
     padding: .2rem .5rem;
     gap: 3rem;
     font-family: "Roboto Condensed", sans-serif;
+    background: white;
     section#logo {
         display: flex;
         flex-direction: row;

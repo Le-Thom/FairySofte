@@ -24,10 +24,10 @@ main {
             padding-left: 2rem;
             left: 0;
             color: whitesmoke;
-            background: #2C476D;
+            background: #4A1D11;
             a {
                 position: absolute;
-                background: #808FB3;
+                background: #D09D8A;
                 width: 100%;
                 height: 100%;
                 left: .4rem;
@@ -64,7 +64,7 @@ main {
                     font-size: 1.2rem;
                     padding: .4rem;
                     border-radius: .4rem;
-                    border: 2px solid #9CBAE3;
+                    border: 2px solid #ECD4BB;
                 }
                 padding-bottom: 1rem;
             }
@@ -90,7 +90,7 @@ main {
                     font-size: 1.2rem;
                     padding: .4rem;
                     border-radius: .4rem;
-                    border: 2px solid #9CBAE3;
+                    border: 2px solid #ECD4BB;
                 }
                 padding-bottom: 1rem;
             }
@@ -100,20 +100,20 @@ main {
                 padding: .7rem;
                 font-size: 1rem;
                 font-weight: bold;
-                background: #4060BA;
+                background: #882B33;
                 color: whitesmoke;
                 border-radius: .5rem;
                 cursor: pointer;
                 border: none;
             }
             button:hover {
-                background: #2C476D;
+                background: #4A1D11;
                 transition: .1s;
             }
             p {
                 margin: .3rem;
                 font-size: .8rem;
-                color: #9CBAE3;
+                color: #ECD4BB;
                 a {
                     text-decoration: none;
                     color: inherit;

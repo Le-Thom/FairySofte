@@ -1,0 +1,13 @@
+main {
+    /** { border: 1px solid red;}*/
+    align-content: center;
+    justify-items: center;
+    padding: 2rem 0;
+    div.container {
+        background: whitesmoke;
+        width: 80%;
+        min-height: 10rem;
+        padding: 2rem;
+        color: black;
+    }
+}
