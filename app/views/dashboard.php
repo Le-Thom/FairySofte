@@ -9,12 +9,18 @@
     <link href="/public/css/global.css" type="text/css" rel="stylesheet">
     <link href="/public/css/dashboard.css" type="text/css" rel="stylesheet">
     <link rel="preload" as="image" href="/public/img/background.png">
+    <link rel="icon" href="/public/img/icon_48.png">
 </head>
 <body>
 <?php include_once __DIR__ . "/../components/header.php" ?> 
 <main>
     <div class="container">
         <section id="nav">
+<!--            <table>-->
+<!--                <tr>-->
+<!--                    <td><i class="fa-solid fa-duotone fa-id-card"></td>-->
+<!--                </tr>-->
+<!--            </table>-->
             <ul>
                 <li class="nav-group">
                     <a><i class="fa-solid fa-duotone fa-id-card"></i> Compte</a>

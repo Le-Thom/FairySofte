@@ -6,6 +6,7 @@ header {
     gap: 3rem;
     font-family: "Roboto Condensed", sans-serif;
     background: white;
+    z-index: 99;
     section#logo {
         display: flex;
         flex-direction: row;

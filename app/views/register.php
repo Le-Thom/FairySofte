@@ -1,6 +1,40 @@
 <?php
 
+//use FairySofte\Utils\Mailer;
+
+require_once __DIR__ . "/../utils/Mailer.php";
+
 session_start();
+
+if($_SERVER["REQUEST_METHOD"] === 'POST') {
+    $firstName = trim($_POST["first-name"] ?? '');
+    $lastName = trim($_POST["last-name"] ?? '');
+    $nickname = trim($_POST["nickname"] ?? '');
+    $birthDate = trim($_POST["birthdate"] ?? '');
+    $emailAddress = trim($_POST["mail"] ?? '');
+    $password = trim($_POST["password"] ?? '');
+    $confirmPassword = trim($_POST["password-confirm"] ?? '');
+    $privacyPolicy = trim($_POST["privacy-policy"] ?? '');
+    $newsletter = trim($_POST["newsletter"] ?? '');
+    $spacenoopNewsletter = trim($_POST["spacenoop-news"] ?? '');
+
+    // Check values
+    $errors = [];
+
+    if(empty($firstName)) $errors[] = "Veuillez indiquer votre prénom";
+    if(empty($lastName)) $errors[] = "Veuillez indiquer votre nom de famille";
+    if(empty($birthDate)) $errors[] = "Veuillez indiquer votre date de naissance";
+    if(empty($emailAddress)) $errors[] = "Veuillez indiquer votre adresse e-mail";
+    if(empty($password) || empty($confirmPassword)) $errors[] = "Veuillez créer un mot de passe";
+    if($password !== $confirmPassword) $errors[] = "Les mots de passes ne correspondent pas.";
+    if(empty($privacyPolicy)) $errors[] = "Veuillez accepter la politique de confidentialité";
+
+    if(empty($errors)) {
+        \FairySofte\Utils\Mailer::sendMail($emailAddress, "FairySofte - Validation d'inscription", "Bonjour ".$firstName.", ton inscription à FairySofte à bien été enregistrée. Tu recevra la confirmation de création de ton compte dans quelques instants.");
+        echo "Un mail vous a été envoyé !";
+        die;
+    }
+}
 
 
 if(isset($_SESSION["auth_token"])) {
@@ -24,7 +58,7 @@ if(isset($_SESSION["auth_token"])) {
 <main>
     <div id="register">
         <h1>Créer un compte<a>&nbsp;</a></h1>
-        <form>
+        <form method="POST">
             <div class="input-group">
                 <label for="first-name">Prénom<a>&nbsp;*</a></label>
                 <input type="text" id="first-name" name="first-name" required>
@@ -34,9 +68,9 @@ if(isset($_SESSION["auth_token"])) {
                 <input type="text" id="last-name" name="last-name" required>
             </div>
             <div class="input-group">
-                <label for="in-game-name">Pseudonyme</label>
+                <label for="nickname">Pseudonyme</label>
                 <p>Ce pseudonyme sera utilisé sur le blog, le forum et sera transmis aux organisateur de sessions d'airsoft de l'association afin de pouvoir vous identifier plus facilement.</p>
-                <input type="text" id="in-game-name" name="in-game-name">
+                <input type="text" id="nickname" name="nickname">
             </div>
             <div class="input-group">
                 <label for="birthdate">Date de naissance<a>&nbsp;*</a></label>
