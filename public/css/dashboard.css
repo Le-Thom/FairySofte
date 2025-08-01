@@ -12,10 +12,14 @@ main {
         color: black;
         display: flex;
         flex-direction: row;
-        gap: .5rem;
+        gap: .2rem;
         section#nav {
-            border: 1px solid blue;
+            /*border: 1px solid blue;*/
             display: flex;
+            flex-direction: column;
+            h1 {
+                margin: 0;
+            }
             /*align-content: start;*/
             /*justify-content: end;*/
             /*align-self: start;*/
@@ -24,30 +28,47 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: .3rem;
-                padding: 0 .5rem;
+                padding: 0;
+                a {
+                /*    width: 100%;*/
+                    cursor: pointer;
+                    svg {
+                        width: 1.5rem;
+                    }
+                }
                 li {
-                    width: 100%;
+                    padding: .2rem .5rem;
+                    /*width: 100%;*/
+                    transition: .2s;
+                }
+                li:hover {
+                    background: #e0e0e0;
+                    border-radius: .3rem;
+                    padding: .5rem;
+                    transition: .2s;
+                }
+                li.selected {
+                    background: #4d4d4d;
+                    color: whitesmoke;
+                    border-radius: .3rem;
+                    padding: .5rem;
+                    transition: .2s;
                     a {
-                        cursor: pointer;
+                        color: whitesmoke;
                         svg {
-                            width: 1.5rem;
+                            fill: whitesmoke;
                         }
                     }
                 }
             }
         }
-        img#separator {
-            /*border: 1px solid red;*/
-            width: 5;
-            background-color: black;
-            box-shadow: black 0rem 0rem 1rem .2rem;
-            -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
-            mask-image: linear-gradient(to right, black 0%, transparent 100%);
-        }
         section#content {
             flex: 1 0 auto;
-            border: 1px solid darkgreen;
+            /*border: 1px solid darkgreen;*/
             min-height: 60vh;
+            padding: 1rem;
+            border-radius: .5rem;
+            box-shadow: #0000005f 0 0 .3rem 0 inset;
         }
     }
 }

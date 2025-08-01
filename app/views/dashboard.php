@@ -21,33 +21,48 @@
 <!--                    <td><i class="fa-solid fa-duotone fa-id-card"></td>-->
 <!--                </tr>-->
 <!--            </table>-->
+            <h1>Tableau de bord</h1>
             <ul>
-                <li class="nav-group">
-                    <a><i class="fa-solid fa-duotone fa-id-card"></i> Compte</a>
-                </li>
-                <li class="nav-group">
-                    <a><i class="fa-solid fa-duotone fa-lock"></i> Sécurité</a>
-                </li>
-                <li class="nav-group">
-                    <a><i class="fa-solid fa-duotone fa-arrow-up-right-from-square"></i> Applications externes</a>
-                </li>
+                <a>
+                    <li class="nav-group <?php if(!isset($_GET["nav"])) echo "selected"; ?>">
+                        <i class="fa-solid fa-duotone fa-id-card"></i> Profil
+                    </li>
+                </a>
+                <a>
+                    <li class="nav-group">
+                        <i class="fa-solid fa-duotone fa-lock"></i> Sécurité
+                    </li>
+                </a>
+                <a>
+                    <li class="nav-group">
+                        <i class="fa-solid fa-duotone fa-arrow-up-right-from-square"></i> Applications externes
+                    </li>
+                </a>
 <!--                <li class="nav-group">-->
 <!--                    <a><i class="fa-solid fa-id-card"></i> Vos informations</a>-->
 <!--                </li>-->
 <!--                <li class="nav-group">-->
 <!--                    <a><i class="fa-solid fa-id-card"></i> Vos informations</a>-->
 <!--                </li>-->
-                <li class="nav-group">
-                    <a><i class="fa-solid fa-duotone fa-envelopes"></i> Notifications</a>
-                </li>
-                <li class="nav-group">
-                    <a><i class="fa-solid fa-duotone fa-gear"></i> Vos Paramètres</a>
-                </li>
+                <a>
+                    <li class="nav-group">
+                        <i class="fa-solid fa-duotone fa-envelopes"></i> Notifications
+                    </li>
+                </a>
+                <a>
+                    <li class="nav-group">
+                        <i class="fa-solid fa-duotone fa-gear"></i> Vos Paramètres
+                    </li>
+                </a>
             </ul>
         </section>
         <img id="separator">
         <section id="content">
-            
+            <?php
+            if(!isset($_GET["nav"])) {
+                include_once __DIR__ . "/../components/userDashboard/accountInformations.php";
+            }
+            ?>
         </section>
     </div>
 </main>
