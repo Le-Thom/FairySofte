@@ -57,106 +57,44 @@
     <style>
         form#profile-form {
             section {
-                /*div.avatar {*/
-                /*    border: 1px solid red;*/
-                /*    display: flex;*/
-                /*    flex-direction: row;*/
-                /*    align-items: end;*/
-                /*    gap: .5rem;*/
-                /*    div.input-group {*/
-                /*        display: flex;*/
-                /*        input {*/
-                /*            display: none;*/
-                /*        }*/
-                /*        a {*/
-                /*            !*margin: 0;*!*/
-                /*            text-decoration: none;*/
-                /*            color: #000;*/
-                /*            background: #dfdfdf;*/
-                /*            border-radius: .5rem;*/
-                /*            padding: .4rem .7rem;*/
-                /*        }*/
-                /*        label {*/
-                /*            cursor: pointer;*/
-                /*        }*/
-                /*    }*/
-                table {
-                    /*border-collapse: collapse;*/
-                    /*width: 100%;*/
-                    td {
-                        padding: .5rem 1rem 0 0;
-                        input[type="text"], input[type="email"] {
-                            /*width: max-content;*/
-                            border-radius: .3rem;
-                            /*font-size: 1.1rem;*/
-                            padding: .3rem .2rem;
-                            border: #d5d5d5 3px solid;
-                        }
-                    }
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                grid-row-gap: .5rem;
+                input[type="text"], input[type="email"] {
+                    /*width: max-content;*/
+                    border-radius: .3rem;
+                    /*font-size: 1.1rem;*/
+                    padding: .3rem .5rem;
+                    border: #d5d5d5 2px solid;
+                    width: 1fr;
+                }
+                textarea {
+                    resize: vertical;
+                    border: none;
+                    width: 20rem;
+                }
+                label {
+                    padding: 0 1.5rem 0 0;
+                    align-self: center;
+                    justify-self: left;
+                    justify-content: center;
                 }
             }
         }
     </style>
+    <h1>Vos informations</h1>
+<!--    <p>Vous pouvez modifier vos informations personnelles ici.</p>-->
     <section>
-<!--        <div class="avatar">-->
-<!--            <img src="https://placehold.co/96" alt="Avatar">-->
-<!--            <div class="input-group button">-->
-<!--                <input type="file" accept=".png, .jpg, .jpeg" name="avatar" id="avatar" style="display: none">-->
-<!--                <a href="#"><label for="avatar">Changer mon avatar</label></a>-->
-<!--            </div>-->
-<!--            <div class="input-group button">-->
-<!--                <input type="submit" formaction="POST">-->
-<!--                <a href="#" style="background-color: #ffb0b0"><label for="avatar">Supprimer mon avatar</label></a>-->
-<!--            </div>-->
-<!--        </div>-->
-        <h1>Vos informations</h1>
-<!--        <p>Vous pouvez modifier vos informations personnelles ici.</p>-->
-        <table>
-            <tr class="input-group">
-                <td>
-                    <label for="first-name">Prénom</label>
-                </td>
-                <td>
-                    <input type="text" id="first-name" name="first-name" required>
-                </td>
-            </tr>
-            <tr class="input-group">
-                <td>
-                    <label for="last-name">Nom de famille</label>
-                </td>
-                <td>
-                    <input type="text" id="last-name" name="last-name" required>
-                </td>
-            </tr>
-            <tr class="input-group">
-                <td>
-                    <label for="username">Nom d'utilisateur</label>
-                </td>
-                <td>
-                    <input type="text" id="username" name="username" required>
-                </td>
-            </tr>
-            <tr class="input-group">
-                <td>
-                    <label for="email">Adresse e-mail</label>
-                </td>
-                <td>
-                    <input type="email" id="email" name="email" required>
-                </td>
-            </tr>
-            <tr class="input-group">
-                <td>
-                    <label for="bio">Biographie</label>
-                </td>
-                <td>
-                    <textarea id="bio" name="bio"></textarea>
-                </td>
-            </tr>
-            <tr class="input-group">
-                <td colspan="2">
-                    <button type="submit">Mettre à jour les informations</button>
-                </td>
-            </tr>
-        </table>
+        <label for="first-name">Prénom</label>
+        <input type="text" id="first-name" name="first-name" required>
+        <label for="last-name">Nom de famille</label>
+        <input type="text" id="last-name" name="last-name" required>
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" required>
+        <label for="bio">Biographie</label>
+        <textarea id="bio" name="bio"></textarea>
     </section>
+    <button type="submit">Mettre à jour les informations</button>
 </form>
